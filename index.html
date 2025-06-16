@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caça Palavras - Diversão Garantida!</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff6b9d">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon-32x32.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>🌟 Caça Palavras 🌟</h1>
+            <div class="game-info">
+                <div class="level-info">
+                    <span>Nível: <span id="current-level">1</span>/50</span>
+                </div>
+                <div class="score-info">
+                    <span>Pontos: <span id="score">0</span></span>
+                </div>
+                <div class="words-found">
+                    <span>Palavras: <span id="words-found">0</span>/<span id="total-words">0</span></span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-main">
+            <div class="words-list">
+                <h3>🔍 Encontre as palavras:</h3>
+                <div id="words-to-find"></div>
+            </div>
+
+            <div class="grid-container">
+                <div id="word-grid"></div>
+            </div>
+
+            <div class="game-controls">
+                <button id="hint-btn" class="btn btn-hint">💡 Dica</button>
+                <button id="reset-btn" class="btn btn-reset">🔄 Reiniciar</button>
+                <button id="next-level-btn" class="btn btn-next" style="display: none;">➡️ Próximo Nível</button>
+            </div>
+        </main>
+
+        <!-- Modal de Parabéns -->
+        <div id="celebration-modal" class="modal">
+            <div class="modal-content">
+                <div class="celebration-content">
+                    <h2>🎉 PARABÉNS! 🎉</h2>
+                    <p id="celebration-message"></p>
+                    <div class="stars">⭐⭐⭐</div>
+                    <button id="continue-btn" class="btn btn-primary">Continuar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Fim de Jogo -->
+        <div id="game-complete-modal" class="modal">
+            <div class="modal-content">
+                <div class="celebration-content">
+                    <h2>🏆 VOCÊ É INCRÍVEL! 🏆</h2>
+                    <p>Parabéns! Você completou todos os 50 níveis!</p>
+                    <p>Pontuação final: <span id="final-score"></span></p>
+                    <div class="stars">🌟⭐🌟⭐🌟</div>
+                    <button id="restart-game-btn" class="btn btn-primary">Jogar Novamente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
